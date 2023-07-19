@@ -1,0 +1,47 @@
+1---test veritabanınızda employee isimli sütun bilgileri id(INTEGER), name VARCHAR(50), birthday DATE, email VARCHAR(100) olan bir tablo oluşturalım.
+2---Oluşturduğumuz employee tablosuna 'Mockaroo' servisini kullanarak 50 adet veri ekleyelim.
+3---Sütunların her birine göre diğer sütunları güncelleyecek 5 adet UPDATE işlemi yapalım.
+4---Sütunların her birine göre ilgili satırı silecek 5 adet DELETE işlemi yapalım.
+
+1 ---CREATE TABLE employee(
+	id SERIAL,
+	name VARCHAR(50),
+	birthday DATE,
+	email VARCHAR(50)
+);
+2---insert into employee (name, birthday, email) values ('Thomasine', '2023-04-18', 'thalcro0@cmu.edu');
+insert into employee (name, birthday, email) values ('Judy', '2022-09-13', 'jdisdel1@wikimedia.org');
+insert into employee (name, birthday, email) values ('Cyrill', '2022-10-25', 'cbewfield2@issuu.com');
+insert into employee (name, birthday, email) values ('Skipper', '2023-01-02', 'stomblett3@dropbox.com');
+insert into employee (name, birthday, email) values ('Lorri', '2023-04-22', 'lfetters4@mlb.com');
+insert into employee (name, birthday, email) values ('Bili', '2022-11-08', 'bmoland5@cnbc.com');
+insert into employee (name, birthday, email) values ('Irita', '2023-05-07', 'ivennard6@cnet.com');
+insert into employee (name, birthday, email) values ('Anjanette', '2022-11-03', 'ajickles7@cisco.com');
+insert into employee (name, birthday, email) values ('Isabel', '2023-05-31', 'isprackling8@altervista.org');
+insert into employee (name, birthday, email) values ('Tine', '2023-02-27', 'tmarklin9@wordpress.org');
+insert into employee (name, birthday, email) values ('Jermaine', '2023-06-01', 'jtillarda@youtube.com');
+insert into employee (name, birthday, email) values ('Lucienne', '2022-08-02', 'lpietrowiczb@canalblog.com');
+insert into employee (name, birthday, email) values ('Flinn', '2023-03-14', 'fmartschikc@furl.net');
+insert into employee (name, birthday, email) values ('Darwin', '2023-02-25', 'ddeerd@nyu.edu');
+insert into employee (name, birthday, email) values ('Moreen', '2023-05-08', 'mledforde@google.com.br');
+insert into employee (name, birthday, email) values ('Leann', '2023-05-20', 'lpritchardf@google.co.uk');
+insert into employee (name, birthday, email) values ('Holmes', '2023-05-29', 'hclingang@comsenz.com');
+insert into employee (name, birthday, email) values ('Sheilakathryn', '2023-04-14', 'slilloeh@mapy.cz');
+insert into employee (name, birthday, email) values ('Rosetta', '2022-09-30', 'rbowcocki@simplemachines.org');
+insert into employee (name, birthday, email) values ('Berty', '2023-06-26', 'bdionisioj@abc.net.au');
+insert into employee (name, birthday, email) values ('Casar', '2023-02-15', 'cpurringtonk@g.co');
+insert into employee (name, birthday, email) values ('Jeana', '2022-09-04', 'jcopperwaitel@engadget.com');
+insert into employee (name, birthday, email) values ('Neddie', '2023-03-06', 'nrattenberiem@arizona.edu');
+insert into employee (name, birthday, email) values ('Anson', '2022-09-16', 'acalteran@economist.com');
+
+
+3---UPDATE employee
+SET name ='XXXX',
+    birthday ='2021-02-28'
+WHERE id=5;
+
+
+
+4---DELETE FROM employee
+WHERE name ='XXXX'
+RETURNING * ;
